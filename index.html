@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Remit Now - Online Money Transfer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+</head>
+
+<body>
+
+  <header>
+    <div class="wrapper">
+      <h1 class="logo"></h1>
+      <nav>
+        <h2>Main Navigation</h2>
+        <div id="burger-nav"></div>
+        <ul>
+          <li>
+            <select class="language" id="select1">
+              <option>English</option>
+              <option>Français</option>
+              <option>Español</option>
+            </select>
+          </li>
+          <li><a href="#">How it Works</a></li>
+          <li><a href="#" class="">Help</a></li>
+          <li><a href="#" class="">Login</a></li>
+          <li>
+            <a href="#"><input type="button" value="Signup" name="getstarted" class="signup">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="clear"></div>
+  <div class="main-banner">
+    <div class="banner-content">
+      <ul class="banner-content-left">
+        <li>
+          <h2 class="banner-head1">Fast Secure</h2>
+          <h2 class="banner-head2">money transfers</h2>
+          <p class="banner-para">
+            Send money with a better exchange rate and
+          </p>
+          <p class="banner-para">
+            avoid excessive bank fees.
+          </p>
+        </li>
+      </ul>
+      <ul class="banner-content-right">
+        <li>
+          <div class="txtsend">
+            <span>You Send</span><br />
+            <input type="number" placeholder="1000" class="numbertxt" />
+          </div>
+          <div class="countryselect">
+            <!--<select id="flag" onchange="changeflag()" required="" class="selectstyle">
+                  <option data-cur="BHD" value="Bahrain">BH</option>
+                  <option data-cur="SAR" value="Saudi-Arabia">SA</option>
+                  <option data-cur="AED" value="United-Arab-Emirates">UAE</option>
+              </select>-->
+            <div class="select-style">
+              <span id="contry">Australia</span>
+              <select id="flag" onchange="changeflag(this)">
+                <option data-cur="Country" value="" selected="">Choose a country to send from</option>
+
+                <option data-cur="BHD" value="Bahrain" data-flag="Bahrain">Bahrain-BHD</option>
+                <option data-cur="SAR" value="Saudi Arabia" data-flag="Saudi Arabia">Saudi Arabia-SA</option>
+                <option data-cur="AED" value="United Arab Emirates" data-flag="United Arab Emirates">United Arab
+                  Emirates-UAE</option>
+              </select>
+              <img id="img">
+            </div>
+          </div>
+        </li>
+        <div class="clear"></div>
+        <li>
+          <div class="sendimg">
+            <img src="images/send1.png" alt="send" class="img-responsive" />
+          </div>
+          <div class="fees">
+            Fees 1.69
+          </div>
+        </li>
+        <div class="clear"></div>
+
+        <li>
+          <div class="txtsend">
+            <span>Recipient Gets</span><br />
+            <input type="number" placeholder="85,379" class="numbertxt" />
+          </div>
+
+          <div class="countryselect">
+            <div class="select-style secondflag">
+              <span id="contry1">Kuwait - KWD - Send To</span>
+              <select id="flag1" onchange="changeflag1(this)" required="">
+                <option data-cur="Country" value="" selected="">Choose a country to send to</option>
+                <option data-cur="AUD" value="Australia" data-flag="Australia">Australia -AUD</option>
+                <option data-cur="EUR" value="Austria" data-flag="Austria">Austria - EUR</option>
+
+                <option data-cur="EUR" value="Belgium" data-flag="Belgium">Belgium - EUR</option>
+
+                <option data-cur="EUR" value="Cyprus" data-flag="Cyprus">Cyprus - EUR</option>
+                <option data-cur="EUR" value="Denmark" data-flag="Denmark">Denmark - EUR</option>
+                <option data-cur="EUR" value="Finland" data-flag="Finland">Finland - EUR </option>
+                <option data-cur="EUR" value="France" data-flag="France">France - EUR </option>
+                <option data-cur="EUR" value="Germany" data-flag="Germany">Germany - EUR</option>
+                <option data-cur="EUR" value="Greece" data-flag="Greece">Greece - EUR</option>
+                <option data-cur="USD" value="Guam" data-flag="Guam">Guam - USD</option>
+
+                <option data-cur="INR" value="India" data-flag="India">India - INR</option>
+                <option data-cur="EUR" value="Ireland" data-flag="Ireland">Ireland - EUR </option>
+                <option data-cur="EUR" value="Italy" data-flag="Italy">Italy - EUR</option>
+                <option data-cur="KWD" value="Kuwait" data-flag="Kuwait">Kuwait - KWD</option>
+                <option data-cur="EUR" value="Luxembourg" data-flag="Luxembourg">Luxembourg - EUR</option>
+                <option data-cur="EUR" value="Malta" data-flag="Malta">Malta - EUR</option>
+                <option data-cur="MAD" value="Morocco" data-flag="Morocco">Morocco - MAD</option>
+                <option data-cur="EUR" value="Netherlands" data-flag="Netherlands">Netherlands - EUR</option>
+                <option data-cur="PKR" value="Pakistan" data-flag="Pakistan">Pakistan - PKR</option>
+                <option data-cur="EUR" value="Portugal" data-flag="Portugal">Portugal - EUR</option>
+                <option data-cur="SAR" value="Saudi-Arabia" data-flag="Saudi-Arabia">Saudi Arabia - SAR</option>
+                <option data-cur="EUR" value="Slovakia" data-flag="Slovakia">Slovakia - EUR</option>
+                <option data-cur="EUR" value="Spain" data-flag="Spain">Spain - EUR</option>
+                <option data-cur="USD" value="Turks-and-Caicos-Islands" data-flag="Turks-and-Caicos-Islands">Turks and
+                  Caicos Islands - USD</option>
+                <option data-cur="AED" value="United-Arab-Emirates" data-flag="United-Arab-Emirates">United Arab
+                  Emirates - AED</option>
+                <option data-cur="GBP" value="United-Kingdom" data-flag="United-Kingdom">United Kingdom - GBP</option>
+                <option data-cur="USD" value="United-States" data-flag="United-States">United States - USD</option>
+
+              </select>
+              <img id="img1">
+            </div>
+          </div>
+        </li>
+        <div class="clear"></div>
+        <li>
+          <div class="lblbaner-left">
+            Total to Pay 1500
+          </div>
+          <div class="lblbaner-right">
+            1 GBP = 85.84 INR
+          </div>
+        </li>
+        <div class="clear"></div>
+        <li>
+          <button class="btn getstarted">Get Started</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10">
+        <img src="images/abtimg.jpg" class="img-responsive" />
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInRight" data-wow-duration="2s" data-wow-offset="10">
+        <h2 class="abtheading">Why Remit Now?</h2>
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <img src="images/lowcosticon.png" alt="lowcosticon" title="" class="img-responsive iconimgstyle" />
+            <div class="why1">
+              <h3>Low Cost</h3>
+              <p>
+                Our low fees and exchange rates are shown upfront.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <img src="images/fasticon.png" alt="fast" title="" class="img-responsive iconimgstyle" />
+            <div class="why1">
+              <h3>Fast</h3>
+              <p>
+                Get your money to family and friends in minutes.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <img src="images/trustedicon.png" alt="trusted" title="" class="img-responsive iconimgstyle" />
+            <div class="why1">
+              <h3>Trusted</h3>
+              <p>
+                We’ve sent millions of transfers to over 125 countries.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <img src="images/tick.png" alt="simple" title="" class="img-responsive iconimgstyle" />
+            <div class="why1">
+              <h3>Simple</h3>
+              <p>
+                It’s easy to use and we’re here to help round the clock.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid safeouter">
+    <div class="container safeandsecurebox">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 wow zoomIn" data-wow-duration="2s" data-wow-offset="10">
+          <h3>Safe and Secure</h3>
+          <h5>Your money’s in safe hands with us</h5>
+          <p>
+            Our industry-leading technology protects your money and guarantees it arrives safely every time. We’re
+            licensed by government regulators around the world, so you can be sure we meet the highest possible
+            standards.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-12 wow flipInX" data-wow-duration="2s">
+            <img src="images/microsoft.png" alt="microsoft" class="img-responsive" />
+          </div>
+          <div class="col-md-3 col-sm-12 wow flipInX" data-wow-duration="2s" data-wow-offset="10">
+            <img src="images/norton.png" alt="norton" class="img-responsive" />
+          </div>
+          <div class="col-md-3 col-sm-12 wow flipInX" data-wow-duration="2s" data-wow-offset="10">
+            <img src="images/pci.png" alt="pci" class="img-responsive" />
+          </div>
+          <div class="col-md-3 col-sm-12 wow flipInX" data-wow-duration="2s" data-wow-offset="10">
+            <img src="images/truste.png" alt="truste" class="img-responsive" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container morewaysbox">
+    <div class="row">
+      <h3 class="wow bounceInLeft" data-wow-duration="2s" data-wow-offset="10">more ways to send</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10">
+        <img src="images/bankdeposit.png" class="img-responsive" alt="bankdeposit" />
+        <div class="more1">
+          <h4>Bank Deposit</h4>
+          <p>
+            Send money straight to bank accounts
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3  col-md-6 col-sm-12 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10"
+        data-wow-delay="0.2s">
+        <img src="images/cashpickup.png" class="img-responsive" alt="bankdeposit" />
+        <div class="more1">
+          <h4>Cash Pickup</h4>
+          <p>
+            Get cash from collection points in minutes
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3  col-md-6 col-sm-12 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10"
+        data-wow-delay="0.4s">
+        <img src="images/mobilemoney.png" class="img-responsive" alt="bankdeposit" />
+        <div class="more1">
+          <h4>Mobile Money</h4>
+          <p>
+            Transfers made instantly to Mobile Money accounts
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3  col-md-6 col-sm-12 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10"
+        data-wow-delay="0.6s">
+        <img src="images/airtimepopup.png" class="img-responsive" alt="bankdeposit" />
+        <div class="more1">
+          <h4>Airtime top-up</h4>
+          <p>
+            Mobile airtime is topped-up right away
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container videobox">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3 class="wow slideInLeft" data-wow-duration="2s" data-wow-offset="10">more ways to send</h3>
+        <p class="wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10" data-wow-delay="1s">
+          Our branch network of 20 prime commercial across the Kingdom provides a full range of retail foreign exchange
+          services
+        </p>
+        <p class="wow bounceInDown" data-wow-duration="2s" data-wow-offset="10" data-wow-delay="2s">
+          <span><i class="fa fa-check" aria-hidden="true"></i></span>Secure Transactions
+        </p>
+        <p class="wow bounceInDown" data-wow-duration="2s" data-wow-offset="10" data-wow-delay="3s">
+          <span><i class="fa fa-check" aria-hidden="true"></i></span>Global Access
+        </p>
+        <p class="wow bounceInDown" data-wow-duration="2s" data-wow-offset="10" data-wow-delay="4s">
+          <span><i class="fa fa-check" aria-hidden="true"></i></span>Easy Mobile Cash
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 wow slideInRight" data-wow-duration="2s" data-wow-offset="10">
+        <img src="images/videobanner.png" alt="videobanner" title="" class="img-responsive" />
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container testimonials">
+    <div class="row">
+      <h3 class="wow zoomIn" data-wow-duration="2s" data-wow-offset="10">what others say</h3>
+
+      <div class="container testcont">
+        <div class='row'>
+          <div class='col-md-12'>
+            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+
+              <ol class="carousel-indicators">
+                <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#quote-carousel" data-slide-to="1"></li>
+                <li data-target="#quote-carousel" data-slide-to="2"></li>
+              </ol>
+
+              <div class="carousel-inner">
+
+                <div class="item active">
+                  <blockquote>
+                    <div class="row">
+                      <div class="col-sm-1 ">
+                        <!--<img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">-->
+                        <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+                      </div>
+                      <div class="col-sm-10">
+                        <p>Quick smooth transactions. I find using WorldRemit services work very well. Once have account
+                          and receiver info entered before making transaction allows the process to be executed very
+                          quickly. </p>
+                        <small><span><img src="flags/flat/24/Bhutan.png" class="img-responsive" /></span>Someone
+                          famous</small>
+                      </div>
+
+                    </div>
+                  </blockquote>
+                </div>
+
+                <div class="item">
+                  <blockquote>
+                    <div class="row">
+                      <div class="col-sm-1">
+                        <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;">-->
+                      </div>
+                      <div class="col-sm-10">
+                        <p>Fast and excellent service always...happy customer!
+                          Nothing beats the fact that my money transactions online is safe and processed really quick
+                          and could be done anywhere and at anytime.</p>
+                        <small><span><img src="flags/flat/24/Aruba.png" class="img-responsive" /></span>Someone
+                          famous</small>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                <!-- Quote 3 -->
+                <div class="item">
+                  <blockquote>
+                    <div class="row">
+                      <div class="col-sm-1">
+                        <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg" style="width: 100px;height:100px;">-->
+                      </div>
+                      <div class="col-sm-10">
+                        <p>Really good to use, fast transfers of funds. I use WorldRemit regularly and it's always the
+                          same fast, easy, no fuss transaction. Best company by far to send money.I recommend Remitnow
+                        </p>
+                        <small><span><img src="flags/flat/24/Australia.png" class="img-responsive" /></span>Someone
+                          famous</small>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i
+                  class="fa fa-chevron-left"></i></a>
+              <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i
+                  class="fa fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container appbox">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 wow bounceIn" data-wow-duration="2s" data-wow-offset="10">
+        <img src="images/app.jpg" alt="app" title="" class="img-responsive" />
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3 class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="10">send money on the go</h3>
+        <p class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="10" data-wow-delay="1s">
+          Download the RemitNow app and enjoy the same great savings and service on your mobile device.
+        </p>
+        <a href="" class="download-button-apple wow shake" data-wow-duration="2s" data-wow-offset="10"
+          data-wow-delay="2s">
+          Get it on Apple Store
+        </a>
+        <a href="" class="download-button-google wow bounce" data-wow-duration="2s" data-wow-offset="10"
+          data-wow-delay="3s">
+          Get it on Google Play
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <div class="ftimgbox">
+      <img src="images/footer1400.png" alt="footerbg" title="" class="img-responsive ftimg" />
+    </div>
+    </div>
+    <div class="container-fluid footer-bottom">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10">
+            <ul>
+              <li>
+                <h4>RemitNow</h4>
+              </li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Stories</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10"
+            data-wow-delay="0.2s">
+            <ul>
+              <li>
+                <h4>Help and Support</h4>
+              </li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Partners and affiliates</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10"
+            data-wow-delay="0.4s">
+            <ul>
+              <li>
+                <h4>Legal</h4>
+              </li>
+              <li><a href="#">Terms and conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10"
+            data-wow-delay="0.6s">
+            <ul>
+              <li>
+                <h4>Follow Us</h4>
+              </li>
+              <img src="images/socailset.png" alt="" class="img-responsive socialimg">
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid copyright">
+
+
+      <div class="row ">
+        <div class="col-md-12 col-sm-12">
+          <h4>Copyright &copy; 2017 Remitnow</h4>
+          <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+        </div>
+      </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+  <script src="js/menu.js"></script>
+</body>
+
+</html>

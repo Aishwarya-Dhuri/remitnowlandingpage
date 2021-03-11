@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="41" viewBox="0 0 40 41">
+    <defs>
+        <ellipse id="a" cx="19.596" cy="20.044" rx="19.596" ry="20.044"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h39.192v40.089H0z"/>
+        <g>
+            <use fill="#FFF" xlink:href="#a"/>
+            <ellipse cx="19.596" cy="20.044" stroke="#FFF" stroke-width="1.337" rx="18.928" ry="19.376"/>
+        </g>
+        <path fill="#888" d="M21.515 30.956h-4.344v-10.48H15v-3.61h2.17v-2.168c0-2.946 1.226-4.698 4.71-4.698h2.898v3.612h-1.812c-1.356 0-1.445.505-1.445 1.446l-.006 1.808h3.283l-.384 3.61h-2.9v10.48h.001z"/>
+    </g>
+</svg>
